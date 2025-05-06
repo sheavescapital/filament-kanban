@@ -61,7 +61,7 @@ class KanbanBoard extends Page
         ];
     }
 
-    protected function filterRecordsByStatus(Collection $records, array $status): array
+    protected function filterRecordsByStatus(Collection $records, array $status): Collection
     {
         $statusIsCastToEnum = $records->first()?->getAttribute(static::$recordStatusAttribute) instanceof UnitEnum;
 
@@ -69,7 +69,7 @@ class KanbanBoard extends Page
             ? static::$statusEnum::from($status['id'])
             : $status['id'];
 
-        return $records->where(static::$recordStatusAttribute, $filter)->all();
+        return $records->where(static::$recordStatusAttribute, $filter);
     }
 
     protected function getEloquentQuery(): Builder
