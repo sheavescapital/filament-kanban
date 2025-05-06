@@ -1,14 +1,14 @@
 <?php
 
-namespace Mokhosh\FilamentKanban;
+namespace SheavesCapital\FilamentKanban;
 
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
 use Illuminate\Filesystem\Filesystem;
 use Livewire\Features\SupportTesting\Testable;
-use Mokhosh\FilamentKanban\Commands\MakeKanbanBoardCommand;
-use Mokhosh\FilamentKanban\Testing\TestsFilamentKanban;
+use SheavesCapital\FilamentKanban\Commands\MakeKanbanBoardCommand;
+use SheavesCapital\FilamentKanban\Testing\TestsFilamentKanban;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -26,8 +26,7 @@ class FilamentKanbanServiceProvider extends PackageServiceProvider
             ->hasCommands($this->getCommands())
             ->hasInstallCommand(function (InstallCommand $command) {
                 $command
-                    ->publishAssets()
-                    ->askToStarRepoOnGitHub('mokhosh/filament-kanban');
+                    ->publishAssets();
             });
 
         if (file_exists($package->basePath('/../resources/views'))) {

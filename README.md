@@ -1,31 +1,19 @@
 # Add kanban boards to your Filament pages
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/mokhosh/filament-kanban.svg?style=flat-square)](https://packagist.org/packages/mokhosh/filament-kanban)
-[![Total Downloads](https://img.shields.io/packagist/dt/mokhosh/filament-kanban.svg?style=flat-square)](https://packagist.org/packages/mokhosh/filament-kanban)
-
-
-Easily add Kanban board pages to your Filament panels.
-
-![Customized kanban board views](https://raw.githubusercontent.com/mokhosh/filament-kanban/main/images/client-kanban.png)
-
-![Customized edit modal](https://raw.githubusercontent.com/mokhosh/filament-kanban/main/images/client-edit.png)
-
-![Cards with progress indicator](https://raw.githubusercontent.com/mokhosh/filament-kanban/main/images/prospect-kanban.png)
-
-![Another example by @Log1x](https://raw.githubusercontent.com/mokhosh/filament-kanban/main/images/organizer-board.png)
+A fork of [(https://github.com/mokhosh/filament-kanban)](https://github.com/mokhosh/filament-kanban)
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require mokhosh/filament-kanban
+composer require sheavescapital/filament-kanban
 ```
 
 Publish the assets so the styles are correct:
 
 ```bash
-php artisan filament-kanban:install
+php artisan filament:assets
 ```
 
 ## Before You Start
@@ -40,7 +28,7 @@ I recommend you create a string backed `Enum` to define your statuses.
 You can use our `IsKanbanStatus` trait, so you can easily transform your enum cases for the Kanban board using the `statuses` method on your enum.
 
 ```php
-use Mokhosh\FilamentKanban\Concerns\IsKanbanStatus;
+use SheavesCapital\FilamentKanban\Concerns\IsKanbanStatus;
 
 enum UserStatus: string
 {
@@ -256,66 +244,12 @@ protected static string $statusView = 'filament-kanban::kanban-status';
 protected static string $scriptsView = 'filament-kanban::kanban-scripts';
 ```
 
-### Flashing Recently Updated Records
-
-You get some visual feedback when a record has been just updated.
-
-If you're also using [Spatie Eloquent Sortable](https://github.com/spatie/eloquent-sortable) you might experience all records being flashed at the same time. This is because [Eloquent Sortable](https://github.com/spatie/eloquent-sortable) updates the `order_column` of all models when the sort changes.
-In order to fix that, publish their config and set `ignore_timestamps` to `true`.
-
-## Video Tutorial
-
-Are you a visual learner? I have created some Youtube videos to get you started with the package:
-
-> [!WARNING]
-> These videos are recorded with version 1.x of the package.
-> It is now much simpler to use the package, and requires much less code from you.
-> 
-> Hopefully, version 2.x is simple enough to not require videos, but you can still learn a thing or two from these.
-
-[![Creating a Kanban Board in FilamentPHP using filament-kanban: Part 1, Basic setup](https://i3.ytimg.com/vi/GquNTj50E78/maxresdefault.jpg)](https://www.youtube.com/watch?v=GquNTj50E78)
-
-[![Creating a Kanban Board in FilamentPHP: Part 2, Sorting Records with Spatie Eloquent Sortable](https://i3.ytimg.com/vi/ySPx13VZ35s/maxresdefault.jpg)](https://www.youtube.com/watch?v=ySPx13VZ35s)
-
-[![Creating a Kanban Board in FilamentPHP: Part 3, Multiple Kanban boards per model and customizations](https://i3.ytimg.com/vi/Pk-yZIrHTiQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=Pk-yZIrHTiQ)
-
-[![Create a Kanban Task Management App in 15 Minutes: Part 4, Create and Edit Actions](https://i3.ytimg.com/vi/QZP57DBtXrU/maxresdefault.jpg)](https://www.youtube.com/watch?v=QZP57DBtXrU)
-
-[![Create a Kanban Task Management App with FilamentPHP: Part 5, Customize the Views](https://i3.ytimg.com/vi/RF6-2hern08/maxresdefault.jpg)](https://www.youtube.com/watch?v=RF6-2hern08)
-
-[![Create a Kanban Task Management App with FilamentPHP: Part 6, Customize the Theme](https://i3.ytimg.com/vi/hyhmEIoWqTg/maxresdefault.jpg)](https://www.youtube.com/watch?v=hyhmEIoWqTg)
-
-[![Create a Kanban Task Management App with FilamentPHP: Part 7, Custom Views per Kanban Board](https://i3.ytimg.com/vi/WddCaqyE0D0/maxresdefault.jpg)](https://www.youtube.com/watch?v=WddCaqyE0D0)
-
-## Demos and Examples
-
-- [Kanban Example](https://github.com/mokhosh/filament-kanban-example)
-
-- [Kanban Todo](https://github.com/mokhosh/filament-kanban-todo)
 
 ## Testing
 
 ```bash
 composer test
 ```
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
-## TODO
-
-- [ ] remove deprecated recently updated trait
-- [ ] stop passing record to view for recordClick
-- [ ] use filament actions for edit modal
 
 ## Credits
 

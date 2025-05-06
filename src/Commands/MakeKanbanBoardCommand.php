@@ -1,6 +1,6 @@
 <?php
 
-namespace Mokhosh\FilamentKanban\Commands;
+namespace SheavesCapital\FilamentKanban\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 

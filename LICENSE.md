@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) mokhosh <mskhoshnazar@gmail.com>
+Copyright (c) mokhosh <mskhoshnazar@gmail.com>, Sheaves Capital
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

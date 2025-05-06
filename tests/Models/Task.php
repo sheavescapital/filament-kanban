@@ -1,11 +1,11 @@
 <?php
 
-namespace Mokhosh\FilamentKanban\Tests\Models;
+namespace SheavesCapital\FilamentKanban\Tests\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Mokhosh\FilamentKanban\Tests\Enums\TaskStatus;
+use SheavesCapital\FilamentKanban\Tests\Enums\TaskStatus;
 use Spatie\EloquentSortable\Sortable;
 use Spatie\EloquentSortable\SortableTrait;
 

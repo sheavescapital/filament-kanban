@@ -1,6 +1,6 @@
 <?php
 
-namespace Mokhosh\FilamentKanban\Concerns;
+namespace SheavesCapital\FilamentKanban\Concerns;
 
 use Livewire\Attributes\On;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Mokhosh\FilamentKanban\Tests\Factories;
+namespace SheavesCapital\FilamentKanban\Tests\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Mokhosh\FilamentKanban\Tests\Enums\TaskStatus;
-use Mokhosh\FilamentKanban\Tests\Models\Task;
+use SheavesCapital\FilamentKanban\Tests\Enums\TaskStatus;
+use SheavesCapital\FilamentKanban\Tests\Models\Task;
 
 class TaskFactory extends Factory
 {

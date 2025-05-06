@@ -1,8 +1,8 @@
 <?php
 
-use Mokhosh\FilamentKanban\Tests\Enums\TaskStatus;
-use Mokhosh\FilamentKanban\Tests\Models\UlidTask;
-use Mokhosh\FilamentKanban\Tests\Pages\TestBoardWithUlidTask;
+use SheavesCapital\FilamentKanban\Tests\Enums\TaskStatus;
+use SheavesCapital\FilamentKanban\Tests\Models\UlidTask;
+use SheavesCapital\FilamentKanban\Tests\Pages\TestBoardWithUlidTask;
 
 use function Pest\Laravel\actingAs;
 use function Pest\Livewire\livewire;
