@@ -2,6 +2,7 @@
 
 namespace SheavesCapital\FilamentKanban\Pages;
 
+use BackedEnum;
 use Filament\Pages\Page;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
@@ -14,9 +15,9 @@ class KanbanBoard extends Page
     use HasEditRecordModal;
     use HasStatusChange;
 
-    protected static ?string $navigationIcon = 'heroicon-o-document-text';
+    protected static string | BackedEnum | null $navigationIcon = 'heroicon-o-document-text';
 
-    protected static string $view = 'filament-kanban::kanban-board';
+    protected string $view = 'filament-kanban::kanban-board';
 
     protected static string $headerView = 'filament-kanban::kanban-header';
 
